@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Method</title>
+</head>
+<body>
+
+        Dalam HTTP Request, hal yang pertama perlu kita tentukan adalah HTTP Method
+
+        HTTP Method mirip seperti kategori Request
+
+        Ada banyak HTTP Method yang dapat kita gunakan ketika membuat HTTP Request, dan kita bisa sesuaikan sesuai dengan kebutuhan yang kita inginkan
+
+        <!-- Jenis HTTP Method -->
+        GET : Get Method digunakan untuk melakukan Request data. Request data menggunakan GET hanya untuk menerima data, bukan untuk mengirim data
+        HEAD : HEAD Method digunakan sama seperti dengan GET, tapi tanpa membutuhkan Response Body (misal untuk bertanya, apakah di suatu resource ada hal yang kita cari)
+        POST : POST Method digunakan untuk mengirim data ke Server, biasanya POST digunakan untuk mengirim data baru, sehingga biasanya memiliki Request Body
+        PUT : PUT Method digunakan untuk mengganti semua data yang terdapat di Server dengan data baru yang dikirim di Request, misalnya dalam form, maka semua data dalam form akan diubah
+        DELETE : DELETE Method digunakan untuk menghapus data
+        PATCH : PATCH Method digunakan untuk mengubah sebagian data, misalnya dalam form, maka hanya beberapa data dalam form saja yang ingin kita ubah
+        OPTIONS : OPTIONS Method digunakan untuk mendeskripsikan opsi komunikasi yang tersedia, misalnya bertanya ada operasi apa saja di sebuah web, apakah ada GET, POST, HEAD, PUT, PATCH, DELETE, dan lain-lain
+        TRACE : TRACE Method digunakan untuk debugging, Response Trace akan mengembalikan seluruh informasi yang dikirim oleh Client. Saat membuat Web, jangan aktifkan fitur TRACE saat Web sudah jadi, aktifkan hanya pada saat proses pembuatan saja
+</body> 
+</html>
