@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL</title>
+</head>
+<body>
+
+        URL adalah singkatan dari Uniform Resource Locator, URL merupakan alamat dari sebuah resource di Web
+
+        URL wajib kita gunakan untuk menuju informasi resource yang akan kita tuju dalam Web
+
+        Tanpa URL, Client dan Server tidak akan mengerti informasi apa yang ingin kita cari
+        
+
+        <!-- Anatomi URL -->
+        URL terdiri dari beberapa bagian, ada bagian yang wajib ada, dan ada bagian yang tidak wajib ada
+
+        Contoh URL :    https://www.fdhlnrzzmn.com/
+                        https://www.fdhlnrzzmn.com/premium-membership
+                        https://www.fdhlnrzzmn.com/?search=freelance
+
+        <!-- Schema -->
+        Bagian awal di URL adalah Schema yang mengindikasikan protocol yang perlu digunakan oleh Client, biasanya dalam URL website, schema protocol tersebut adalah HTTP atau HTTPS
+        Contoh : http://
+
+        <!-- Authority -->
+        Setelah dipisahkan dengan tanda ://, lalu ada Authority, yang terdiri dari nama domain dan nama port yang dipisahkan menggunakan titik 2
+
+        Nama domain nanti akan ditanyakan ke DNS untuk mendapatkan alamat IP-nya, contoh www.example.com
+
+        Namun kita juga bisa langsung menggunakan IP jika memang website tersebut tidak memiliki nama domain
+
+        Nomor port tidak wajib, tanpa nomor port, secara default bernilai 80 untuk HTTP dan 443 untuk HTTPS, contoh :443
+
+        Contoh : www.example.com:443
+
+        <!-- Path -->
+        Selanjutnya ada Path atau Context Path, dan bagian ini tidak wajib
+
+        Path biasanya berisikan informasi menuju resource yang kita tuju
+
+        Path terlihat seperti kumpulan folder dan diakhiri dengan file yang ingin kita akses
+
+        Contoh : /path/to/my/file.html
+        
+        <!-- Parameters -->
+        Selanjutnya, dalam URL juga bisa terdapat informasi Parameters, namun ini juga tidak wajib
+        
+        Parameters dipisahkan oleh karakter ? (tanda tanya) setelah Authority dan Path
+
+        Parameters merupakan informasi tambahan yang berisi key=value, jika ingin menambahkan lebih dari satu Parameters, kita bisa tambahkan dengan menggunakan karakter & (dan)
+
+        Contoh : ?key1=value1&key2=value2
+        
+        <!-- Anchor -->
+        Anchor merupakan bagian yang tidak wajib juga di URL
+
+        Anchor merupakan representasi bookmark dalam sebuah halaman website
+
+        Misal jika dalam website terdapat banyak sekali bagian informasi, kita bisa gunakan Anchor sebagai bookmark ke tiap bagian informasi tersebut, agar lebih mudah diakses
+
+        Contoh : #SomewhereInTheDocument
+
+</body> 
+</html>
