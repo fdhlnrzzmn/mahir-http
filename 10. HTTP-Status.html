@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Status</title>
+</head>
+<body>
+
+        HTTP Status adalah kode dari HTTP Response (tidak ada di HTTP Request), yang mengindikasikan apakah sebuah Request yang diterima Server itu sukses, gagal, atau ada hal lain yang harus diketahui Client
+
+        HTTP Status diklasifikasikan dalam 5 Grup, yaitu :
+        - Informational Response (100 - 199)
+        - Succesful Response (200 - 299)
+        - Redirect (300 - 399)
+        - Client Error (400 - 499)
+        - Server Error (500 - 599)
+
+        Di dalam HTTP Message di Start Line HTTP Response, setelah Versi HTTP, ada Status Code di situ
+
+        Dokumentasi : https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+
+        <!-- Informational Response ( 100 - 199) -->
+        Informational Responce ini mengindikasikan bahwa Request telah diterima dan dimengerti, namun Client diminta untuk menunggu tahapan akhir Response
+        Pada kenyataannya, Informational Response ini sangat jarang sekali digunakan
+
+        <!-- Successful Response ( 200 - 299) -->
+        Succesful Response merupakan kode yang mengindikasikan bahwa Request yang dikirim oleh Client telah diterima, dimengerti dan sukses diproses oleh Server
+
+        <!-- Redirect -->
+        Redirect mengindikasikan bahwa Client harus melakukan aksi selanjutnya untuk menyelesaikan Request
+        Biasanya Redirect ini digunakan ketika lokasi sebuah resource sudah berubah, sehingga Server meminta Client untuk pindah ke URL lain
+
+        <!-- Client Error -->
+        Client Error mengindikasikan bahwa Request yang dikirim oleh Client tidak diterima oleh Server dikarenakan Request yang dikirim dianggap tidak valid oleh Server
+        Contohnya Client mengirim Body yang salah, Cient melakukan Request ke suatu resource tanpa autentikasi sementara autentikasi-nya wajib, atau resource yang di-request oleh Client tidak ada di Server, dan lain-lain, intinya, error-nya ada di Client
+        
+        <!-- Server Error -->
+        Server Error mengindikasikan bahwa terjadi kesalahan di Server
+        Biasanya ini terjadi ketika ada masalah di Server, seperti misalnya tidak bisa terkoneksi ke basis data, terdapat jaringan error di server, dan lain-lain
+
+</body> 
+</html>
