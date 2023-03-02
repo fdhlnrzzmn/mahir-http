@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Request and HTTP Response</title>
+</head>
+<body>
+
+        HTTP Request dan HTTP Response sebenarnya adalah sebuah HTTP Message
+
+        HTTP Message memiliki standarisasi format, dengan demikian, jika kita ingin membuat Client dan Server sendiri, sebenarnya bisa kita lakukan, asal kita mengikuti standarisasi format HTTP Message
+
+        <!-- Standar Baku HTTP Message untuk Request -->
+        Di dalam HTTP Message untuk Request, ada beberapa bagian, seperti Start Line, Header, Space, dan Body
+        
+        Start Line : POST /login HTTPS/1.1 (Method, Context Path, dan Versi HTTP)
+
+        Header : Isinya adalah Key dan Value, sebelum titik 2 adalah key-nya, lalu diikuti value-nya
+        contohnya : Host: example.com (domain)
+                    Connection : keep-alive 
+                    Accept : application/json
+
+        Space : Ini adalah Enter kosong, pemisah antara Header dan Body
+
+        Body : {"password" : "rahasia", "username" : "paijo"} (contoh dalam bentuk teks, jika video dan audio bisa berbeda)
+        
+        <!-- Standar Baku HTTP Message untuk Response -->
+
+        Start Line : HTTP/1.1 200 (Versi HTTP dan Status Code-nya)
+
+        Header  :   Set-Cookie : X-COMMERCE-SESSION
+                    Content-Type : application/json
+                    Tranfer-Encoding : chunked
+
+        Space : Ini adalah Enter kosong, pemisah antara Header dan Body
+
+        Body : {"status" : "OK", "code" : 200, "data" : {"username" : "Paijo"}} (contoh dalam bentuk teks, jika video dan audio bisa berbeda)
+
+</body> 
+</html>
