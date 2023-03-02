@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Header</title>
+</head>
+<body>
+
+        HTTP Header ini adalah informasi tambahan yang biasanya dikirim pada saat Request dan diterima dari Response
+
+        HTTP Header juga biasanya digunakan agar informasi tidak harus dikirim melalui Request Body atau Response Body
+
+        Pada HTTP Message, HTTP Header terletak di bawah Start Line (Isinya HTTP Method, Path, dan HTTP Version)
+
+        HTTP Header berisi Key : Value, dan saat ini sudah banyak sekali standarisasi nama Key pada HTTP Header
+
+        <!-- Contoh HTTP Header -->
+        Host : Authority pada URL (wajib sejak HTTP/1.1), contohnya : Host : example.com
+        Content-Type : Tipe data dari HTTP Body, saat mengirim data ke Server dari Web Browser, maka perlu masukkan Content Type ke dalam Header-nya dengan value konten yang mau dikirim, teks, gambar, audio, ataukah video, agar Server-nya tahu data apa yang mau kita kirim
+        User-Agent : Informasi User-Agent adalah Browser dan sistem operasi apa yang pengguna pakai
+        Accept : Tipe data yang ingin diterima oleh Client, misalnya text/html
+        Authorization : Credential untuk autentikasi, misalnya Username dan Password
+
+        Dokumentasi Lengkap : https://en.wikipedia.org/wiki/List_of_HTTP_header_fields
+
+</body> 
+</html>
