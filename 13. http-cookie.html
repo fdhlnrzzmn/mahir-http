@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Cookie</title>
+</head>
+<body>
+
+        HTTP didesain Stateless, yang artinya, setiap Request yang dilakukan, HTTP tidak tahu Request apa yang akan terjadi sebelum dan sesudahnya
+
+        Lantas, bagaimana agar Server tahu bahwa Client sudah Login sebelum mengakses halaman tertentu?
+
+        Caranya, bisa menggunakan fitur HTTP Cookie
+
+        <!--  HTTP Cookie -->
+        HTTP Cookie adalah informasi yang diberikan oleh Server, dan Client secara otomatis akan menyimpan data tersebut, dan disimpan di Web Browser
+
+        Ketika HTTP Browser melakukan Request selanjutnya, maka Web Browser akan menyisipkan Cookie yang sudah diterima tadi pada Request sebelumnnya, jadi pada saat Request-Request selanjutnya, si Cookie ini akan selalu ikut
+
+        Dari Cookie tersebutlah, Server bisa mengetahui apakah Request tersebut merupakan Request Client yang sudah Login atau belum
+
+        <!-- Cookie di HTTP Response -->
+        Informasi Cookie yang diberikan dari Server, ditempatkan pada Header dengan value Set-Cookie
+
+        Cookie bisa lebih dari satu, jika Server memberikan lebih dari satu Cookie, bisa menggunakan beberapa Set-Cookie di Header
+        
+        Cookie itu terdiri dari Key dan Value yang berpasangan
+
+        Contoh Cookie di HTTP Response  :   HTTP/1.1 200 (Startline berisikan versi HTTP dan Status Code)
+                                            Set-Cookie : user=fadhil
+                                            Set-Cookie : session= 
+
+        Perlu diingat, Cookie itu bisa diubah oleh Browser, jadi pastikan pada saat membuat aplikasi jangan terima mentah data Cookie-nya, melainkan harus diperiksa dulu di Server, apakah Cookie ini valid atau tidak
+
+        <!-- Cookie di HTTP Request -->
+
+        Setelah Server memberikan HTTP Response yang ada Set-Cookie-nya, maka data Cookie itu akan disimpan di Web Browser
+
+        Selanjutnya, HTTP Request pada Request-Request selanjutnya akan selalu mengirim data Cookie tersebut, yang dimana Cookie yang dikirim bisa menggunakan Header dengan nama Cookie
+
+        Berbeda dengan HTTP Response, Cookie untuk HTTP Request harus digabung pada satu Header jika mempunyai lebih dari satu Cookie 
+
+        Contoh Cookie di HTTP Request : GET /dashboard HTTP/1.1 (Startline berisikan HTTP Method, Path, dan HTTP Version)
+                                        Host : example.com
+                                        Accept : text/html
+                                        Cookie : user=fadhil; session=1391491471941
+
+        <!-- Cookie Attributes -->
+        Cookie memiliki Attribut yang bisa ditambahkan pada saat membuat Cookie di HTTP Response
+
+        Seperti berapa lama masa berlaku Cookie, apakah harus HTTPS, apakah tidak boleh diakses via script, dan lain-lain
+
+        Dokumentasi Cookie Attribut : https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+
+        <!-- Cek Cookie di Web Browser -->
+        Untuk mengetahui Cookie di Web Browser, bisa melalui Inspect lalu di tab Application, lalu di tab Storage, dan di dalam Storage ada Cookie
+        
+</body> 
+</html>
