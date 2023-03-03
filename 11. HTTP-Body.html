@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Body</title>
+</head>
+<body>
+
+        HTTP Body adalah data yang bisa dikirim di HTTP Request oleh Client, atau data yang diterima oleh Server melalui HTTP Request
+
+        Client dan Server bisa sama-sama mengirim HTTP Body
+
+        Kalau dirunut, HTTP Body berada di paling bawah pada HTTP Message, yang dimana urutannya adalah Start Line, Header, Space, lalu kemudian Body
+
+        Type Data yang dikirim di Body bisa dilihat pada Header bagian Content-Type, jika misalnya Content-Type-nya adalah application/json, maka body-nya akan berisikan data JSON
+
+        <!-- Content Type -->
+        HTTP Body itu erat kaitannya dengan Header key Content-Type
+
+        Biasanya, agar Client dan Server mudah mengerti isi HTTP Body, maka HTTP Message akan memiliki Header Content-Type, yang berisi informasi tipe data HTTP Body
+
+        HTTP Body bisa berisikan teks (html, javascript, css, json) atau binary (image, video, audio)
+
+        Data Content-Type sudah memiliki standarisasi, berikut standarisasi-nya : https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+
+        Penting pada saat membuat aplikasi, standarisasi itu harus kita ikuti saat ingin mengirimkan Request dari Client untuk di-Response oleh Server, misanya saat kita akan mengirim data .doc, maka content-type bakunya adalah application/msword, atau kalau gambar .png maka menjadi image/png
+
+</body> 
+</html>
