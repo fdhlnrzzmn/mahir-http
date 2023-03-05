@@ -8,7 +8,24 @@
 </head>
 <body>
 
+        HTTP memiiki fitur yang namanya Caching
+
+        Caching adalah menyimpan data di Client sampai batas waktu yang sudah ditentukan, sehingga jika Client ingin melakukan Request Resource yang sama, cukup ambil Resource-nya di Client, tanpa harus meminta ulang ke Server
+
+        HTTP Caching sangat cocok dilakukan untuk Resource file static yang jarang berubah, seperti file gambar, audio, video, dan lain-lain
+
+        Jadi, bisa menghemat Bandwith (kemampuan kapasitas server mengirim data ke client, misalnya 1 GB/s) karena tidak mengirim objek yang sama berkali-kali
         
-        
+        <!-- Header Cache Contol -->
+        Server, ketika meminta agar Client melakukan Caching, maka HTTP Response perlu menambahkan informasi Cache-Control di Header
+
+        Cache-Control berisikan informasi seperti berapa lama Client bisa menyimpan data Response tersebut, sehingga tidak perlu meminta ulang ke Server
+
+        Dokumentasi Cache Control : https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+
+        Di Web Browser, kita bisa melihat HTTP Response mengenai data yang boleh di Cache melalui Inspect lalu tab Network, lalu di objek-nya, cari Response Header, di situ akan ada key yang namanya Cache-Control, dan akan memiliki value seperti : public (mau login atau logout, boleh di-cache), max-age=134343 (umur penyimpanan Cache, dalam satuan second)
+
+        Dan di Web Browser kita bisa mengetahui file yang diambil dari Memory Cache melalui Key setelah Status-Codes, misalnya 200 (from memory cache), atau bisa juga di bagian tab Network bagian Size
+
 </body> 
 </html>
